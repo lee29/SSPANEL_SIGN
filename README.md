@@ -7,13 +7,13 @@
 
 进入自己fork的仓库，点击 Settings-> Secrets-> New Secrets 添加以下5个Secrets。
 
-AIRPORT_WEB     签到机场网址,多个网址用英文逗号分割。
+WEB     签到机场网址,多个网址用英文逗号分割。
 
-AIRPORT_USER    签到机场登陆邮箱,与网站对应,多个用户用英文逗号分割。
+USER    签到机场登陆邮箱,与网站对应,多个用户用英文逗号分割。
 
-AIRPORT_PWD     签到机场登陆密码,与网站对应,多个密码用英文逗号分割。
+PWD     签到机场登陆密码,与网站对应,多个密码用英文逗号分割。
 
-SEND_KEY   可选设置，微信推送SCKEY码，详情参见http://sc.ftqq.com/
+SCKEY   可选设置，微信推送SCKEY码，详情参见http://sc.ftqq.com/
 
 KTKEY   可选设置，QQ推送Skey码，详情参见https://cp.xuthus.cc/
 
