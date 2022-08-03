@@ -19,9 +19,9 @@ SCKEY   可选设置，微信推送SCKEY码，详情参见http://sc.ftqq.com/
 KTKEY   可选设置，QQ推送Skey码，详情参见https://cp.xuthus.cc/
 | 参数  | 是否必须  | 内容  | 示例  |
 | ------------ | ------------ | ------------ | ------------ |
-| USER  | 是  | 注册机场所用邮箱  | a@example.com 401664491@qq.com,j0vp0dvh@chapedia.org,j0vp0dvh@truthfinderlogin.com |
-| PWD  | 是  | 注册机场所用密码  | password1  |
-| WEB  | 是  | 机场地址  | https://dy.juai.org  |
+| USER  | 是  | 注册机场所用邮箱  | 401664491@qq.com,j0vp0dvh@chapedia.org,j0vp0dvh@truthfinderlogin.com |
+| PWD  | 是  | 注册机场所用密码  | password1,password1,password1  |
+| WEB  | 是  | 机场地址  | https://dy.juai.org,https://dy.juai.org,https://dy.juai.org  |
 | SCKEY  | 否  | Sever酱秘钥  | SCTxxxxxxxxxxxxxx  |
 | KTKEY  | 否  | QQ推送秘钥   | xxxxxxxxxxxxxx  |
 
