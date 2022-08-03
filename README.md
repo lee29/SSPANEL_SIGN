@@ -17,4 +17,17 @@ SCKEY   可选设置，微信推送SCKEY码，详情参见http://sc.ftqq.com/
 
 KTKEY   可选设置，QQ推送Skey码，详情参见https://cp.xuthus.cc/
 
+<details>
+#单用户版本https://github.com/xiaocao666tzh/Airport-Checkin
 
+| 参数  | 是否必须  | 内容  | 示例  |
+| ------------ | ------------ | ------------ | ------------ |
+| EMAIL  | 是  | 注册机场所用邮箱  | a@example.com  |
+| PASSWORD  | 是  | 注册机场所用密码  | password1  |
+| BASE_URL  | 是  | 机场地址  | https://examplea.com  |
+| SCKEY  | 否  | Sever酱秘钥  | SCTxxxxxxxxxxxxxx  |
+| TGBOT  | 否  | Telegram推送bot  | 5xxxxxxx:xxxxxxxxx  |
+| TGUSERID  | 否  | Telegram推送人id  | 8xxxxxxxxx  |
+
+转到`Actions`创建一个workflow，运行一次，以后每天项目都会自动运行。最后，可以到Run sign查看签到情况，同时也会通过Sever酱发送出去。
+</details>

@@ -1,7 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: 机场签到
+name: 多用户机场签到
 
 on:
   # push:
@@ -22,6 +22,10 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.7
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt        
     - name: Run
       env:
         web: ${{ secrets.WEB }}
@@ -30,5 +34,4 @@ jobs:
         sckey: ${{ secrets.SCKEY }}
         ktkey: ${{ secrets.KTKEY }}
       run: |
-        pip install -r requirements.txt
-        python3 checkin_airport.py
+        python3 USERS.py

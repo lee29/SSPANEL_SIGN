@@ -1,4 +1,6 @@
-name: "Airport Checkin"
+#https://github.com/xiaocao666tzh/Airport-Checkin
+#
+name: "单个机场账户签到"
 
 on:
   schedule:
@@ -42,4 +44,4 @@ jobs:
           TGBOT: ${{ secrets.TGBOT }}
           TGUSERID: ${{ secrets.TGUSERID }}
         run: |
-          python3 ./main.py 
+          python3 ./oneUSER.py 
