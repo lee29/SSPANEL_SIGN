@@ -18,10 +18,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3.7
+    - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
-        python-version: 3.7
+        python-version: 3.9
     - name: Run
       env:
         web: ${{ secrets.AIRPORT_WEB }}
@@ -30,6 +30,6 @@ jobs:
         sckey: ${{ secrets.SEND_KEY }}
         ktkey: ${{ secrets.KTKEY }}
       run: |
-        pip install -r requirements.txt
         pip install --upgrade pip
+        pip install -r requirements.txt
         python3 checkin_airport.py
