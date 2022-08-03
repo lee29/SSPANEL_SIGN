@@ -1,4 +1,5 @@
-# Sign-in
+<details>
+<summary>✔️多用户版本</summary>
 每日机场自动签到
 
 根据 https://github.com/ne-21/sspanel-automaticcheckin 代码修改，不支持登陆需要人机验证的机场。
@@ -16,7 +17,17 @@ PWD     签到机场登陆密码,与网站对应,多个密码用英文逗号分�
 SCKEY   可选设置，微信推送SCKEY码，详情参见http://sc.ftqq.com/
 
 KTKEY   可选设置，QQ推送Skey码，详情参见https://cp.xuthus.cc/
+| 参数  | 是否必须  | 内容  | 示例  |
+| ------------ | ------------ | ------------ | ------------ |
+| USER  | 是  | 注册机场所用邮箱  | a@example.com  |
+| PWD  | 是  | 注册机场所用密码  | password1  |
+| WEB  | 是  | 机场地址  | https://examplea.com  |
+| SCKEY  | 否  | Sever酱秘钥  | SCTxxxxxxxxxxxxxx  |
 
+
+
+
+</details>
 <details>
 <summary>✔️单用户版本</summary>
 #单用户版本https://github.com/xiaocao666tzh/Airport-Checkin
