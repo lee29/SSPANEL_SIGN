@@ -18,6 +18,7 @@ SCKEY   可选设置，微信推送SCKEY码，详情参见http://sc.ftqq.com/
 KTKEY   可选设置，QQ推送Skey码，详情参见https://cp.xuthus.cc/
 
 <details>
+<summary>✔️单用户版本</summary>
 #单用户版本https://github.com/xiaocao666tzh/Airport-Checkin
 
 | 参数  | 是否必须  | 内容  | 示例  |
