@@ -40,5 +40,5 @@ jobs:
           pwd: ${{ secrets.PWD }}
           sckey: ${{ secrets.SCKEY }}
           ktkey: ${{ secrets.KTKEY }}
-      run: |
-        python3 ./USERS.py
+        run: |
+          python3 ./USERS.py
