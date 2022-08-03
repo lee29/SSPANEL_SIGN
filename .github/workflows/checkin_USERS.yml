@@ -1,37 +1,44 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
-name: 多用户机场签到
+name: "多个机场账户签到"
 
 on:
-  # push:
-  #   branches: main
-  # gollum:
-  workflow_dispatch:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: "0 22 * * *"  # scheduled at 06:00 (UTC+8) everyday
+  workflow_dispatch:
+
+env:
+  RUN_ENV: 'prod'
+
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id
+    # if: github.ref == 'refs/heads/master'
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.7
-    - name: Install dependencies
+      - name: Checkout master
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          # ref: master
+
+      - name: Set up python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+
+      - name: Random sleep
+        if: github.event_name == 'schedule'
+        run: sleep $(shuf -i 10-300 -n 1)
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run sign
+        env:
+          web: ${{ secrets.WEB }}
+          user: ${{ secrets.USER }}
+          pwd: ${{ secrets.PWD }}
+          sckey: ${{ secrets.SCKEY }}
+          ktkey: ${{ secrets.KTKEY }}
       run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt        
-    - name: Run
-      env:
-        web: ${{ secrets.WEB }}
-        user: ${{ secrets.USER }}
-        pwd: ${{ secrets.PWD }}
-        sckey: ${{ secrets.SCKEY }}
-        ktkey: ${{ secrets.KTKEY }}
-      run: |
-        python3 USERS.py
+        python3 ./USERS.py

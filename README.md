@@ -23,7 +23,7 @@ KTKEY   可选设置，QQ推送Skey码，详情参见https://cp.xuthus.cc/
 | PWD  | 是  | 注册机场所用密码  | password1  |
 | WEB  | 是  | 机场地址  | https://dy.juai.org  |
 | SCKEY  | 否  | Sever酱秘钥  | SCTxxxxxxxxxxxxxx  |
-
+| KTKEY  | 否  | QQ推送秘钥   | xxxxxxxxxxxxxx  |
 
 
 
