@@ -31,4 +31,5 @@ jobs:
         ktkey: ${{ secrets.KTKEY }}
       run: |
         pip install -r requirements.txt
+        pip install --upgrade pip
         python3 checkin_airport.py
