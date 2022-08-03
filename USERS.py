@@ -77,35 +77,35 @@ class SspanelQd(object):
 
         return msgall
         
-#    # Server酱推送
-#    def server_send(self, msg):
-#        if self.sckey == '':
-#            return
-#        server_url = "https://sctapi.ftqq.com/" + str(self.sckey) + ".send"
-#        data = {
-#                'text': "机场签到完成，点击查看详细信息~",
-#                'desp': msg
-#            }
-#        requests.post(server_url, data=data)
-#
-#    # 酷推QQ推送
-#    def kt_send(self, msg):
-#        if self.ktkey == '':
-#            return
-#        kt_url = 'https://push.xuthus.cc/send/'+str(self.ktkey)
-#        data = ('签到完成，点击查看详细信息~\n'+str(msg)).encode("utf-8")
-#        requests.post(kt_url, data=data)
-#
-#    def main(self):
-#        msg = self.checkin()
-#        self.server_send(msg)
-#        self.kt_send(msg)
-#
+    # Server酱推送
+    def server_send(self, msg):
+        if self.sckey == '':
+            return
+        server_url = "https://sctapi.ftqq.com/" + str(self.sckey) + ".send"
+        data = {
+                'text': "机场签到完成，点击查看详细信息~",
+                'desp': msg
+            }
+        requests.post(server_url, data=data)
+
+    # 酷推QQ推送
+    def kt_send(self, msg):
+        if self.ktkey == '':
+            return
+        kt_url = 'https://push.xuthus.cc/send/'+str(self.ktkey)
+        data = ('签到完成，点击查看详细信息~\n'+str(msg)).encode("utf-8")
+        requests.post(kt_url, data=data)
+
+    def main(self):
+        msg = self.checkin()
+        self.server_send(msg)
+        self.kt_send(msg)
+
 # 云函数入口
 #def main_handler(event, context):
 #    run = SspanelQd()
 #    run.main()
-#
+
 #if __name__ == '__main__':
 #    run = SspanelQd()
 #    run.main()

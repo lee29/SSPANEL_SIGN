@@ -1,4 +1,4 @@
-name: "多个机场账户签到"
+name: "多用户机场签到"
 
 on:
   schedule:
